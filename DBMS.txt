@@ -1,0 +1,262 @@
+
+
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 61
+Server version: 8.3.0 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> SHOW ALL DATABE;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ALL DATABE' at line 1
+mysql> SHOW DATABASE;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DATABASE' at line 1
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| kicukiro           |
+| me                 |
+| mysql              |
+| nyandungu          |
+| performance_schema |
+| ruhande            |
+| shikalam           |
+| shikalam1          |
+| sys                |
++--------------------+
+10 rows in set (0.00 sec)
+
+mysql> USE RUHANDE;
+Database changed
+mysql> USE RUHANDE;
+Database changed
+mysql> CREATE TABLE NGOMA(ID_NO INT,FNAME CHAR(15),SNAMES CHAR(15),GENDER CHAR(10),PROVINCE CHAR(16),DISTRICT CHAR(10),SECTOR CHAR(10),SELL CHAR(10), VILLAGE CHAR(16),TELEPHONE VARCHAR(10),EMAIL CHAR(20));
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> INSERT INTO NGOMA VALUE('11', 'JUSUS', 'KAMU', 'MALE', 'NORTHERN', 'MUSANZE', 'MUHOZA', 'KANGONDO', 'BUSASA', '0785554422', JUSUS@GMAIL.COM);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '@GMAIL.COM)' at line 1
+mysql> INSERT INTO NGOMA VALUE('11', 'JUSUS', 'KAMU', 'MALE', 'NORTHERN', 'MUSANZE', 'MUHOZA', 'KANGONDO', 'BUSASA', '0785554422', 'JUSUS@GMAIL.COM');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES('12', 'LUISE', 'MUHOZA', 'WESTERN', 'RISIZI', 'RUTONGO', 'KARAMA', '078997445544','LUISE@GMAIL.COM');
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> INSERT INTO NGOMA VALUES('12', 'LUISE', 'MUHOZA', 'WESTERN', 'RISIZI', 'RUTONGO', 'KARAMA', 'RWENE', '078997445544','LUISE@GMAIL.COM');
+ERROR 1136 (21S01): Column count doesn't match value count at row 1
+mysql> INSERT INTO NGOMA VALUES('12', 'LUISE', 'MUHOZA', 'FEMALE', 'WESTERN', 'RISIZI', 'RUTONGO', 'KARAMA', 'RWENE', '078997445544','LUISE@GMAIL.COM');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO NGOMA VVALUES('13', 'KEVIN', 'MUGISHA','MALE', 'KIGALI', 'KICUKIRO', 'KANOMBE', 'BUSANZA', 'ANTENE', '07865546733, 'KEVIN@GMAIL.COM');
+    '> INSERT INTO NGOMA VALUES('13', 'KEVIN', 'MUGISHA','MALE', 'KIGALI', 'KICUKIRO', 'KANOMBE', 'BUSANZA', 'ANTENE', '07865546733, 'KEVIN@GMAIL.COM');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VVALUES('13', 'KEVIN', 'MUGISHA','MALE', 'KIGALI', 'KICUKIRO', 'KANOMBE', 'BUSAN' at line 1
+mysql> INSERT INTO NGOMA VALUES('13', 'KEVIN', 'MUGISHA','MALE', 'KIGALI', 'KICUKIRO', 'KANOMBE', 'BUSANZA', 'ANTENE', '07865546733, 'KEVIN@GMAIL.COM');
+    '> INSERT INTO NGOMA VALUES('13', 'KEVIN', 'MUGISHA','MALE', 'KIGALI', 'KICUKIRO', 'KANOMBE', 'BUSANZA', 'ANTENE', '07865546733, 'KEVIN@GMAIL.COM');
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'KEVIN@GMAIL.COM');
+INSERT INTO NGOMA VALUES('13', 'KEVIN', 'MUGISHA','MALE', 'KI' at line 1
+mysql> INSERT INTO NGOMA VALUES('13', 'KEVIN', 'MUGISHA','MALE', 'KIGALI', 'KICUKIRO', 'KANOMBE', 'BUSANZA', 'ANTENE', '07865546733', 'KEVIN@GMAIL.COM');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES('13', 'RUGEGE', 'KARANGWA','MALE', 'KIGALI', 'KICUKIRO', 'NYANDUNGU', 'NONKO', 'GASARABA', '078655435342', 'RUGEGE@GMAIL.COM');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES('14', 'RUGAJU', 'KGANGOA','MALE', 'KIGALI', 'GASABO', 'GATSATA', 'IDIGIRI', 'IBERESHI', '07865543232', 'RUGAJU@GMAIL.COM');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES('15', 'BONGISA', 'GATAWUTI','MALE', 'KIGALI', 'GASABO', 'KIMIRONKO', 'KAVUZA', 'KORODORO', '074345345222', 'BONGISA@GMAIL.COM');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES('16', 'MERSA', 'MUSA','FEMALE', 'EASTE', 'BUGESERA', 'NYAMATA', 'MURAMBI', 'JABANA', '074344444452', 'MERSAA@GMAIL.COM');
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES('17', 'MERY', 'MUSABWA','FEMALE', 'EASTE', 'RWAMAGANA', 'MUSHUBI', 'GATATE', 'RUGUNGA', 'BWERAMAN', 'MERY@GMAIL.COM');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO NGOMA VALUES('18', 'MARTE', 'MUHOZA','MALE', 'SOURTH', 'NYANZA', 'MUKURA', 'GASESA', 'MUGINA', 'KAEMBURE', 'MARTE@GMAIL.COM');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO NGOMA VALUES('19', 'LUCK', 'GANZA','MALE', 'KIGALI', 'NYARUGENGE', 'MUHIMA', 'KINAMBA', 'MERU', 'MBURE', 'LUCKE@GMAIL.COM');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> SELECT *FROM NGOMA;
++-------+---------+----------+--------+----------+------------+-----------+----------+----------+------------+-------------------+
+| ID_NO | FNAME   | SNAMES   | GENDER | PROVINCE | DISTRICT   | SECTOR    | SELL     | VILLAGE  | TELEPHONE  | EMAIL             |
++-------+---------+----------+--------+----------+------------+-----------+----------+----------+------------+-------------------+
+|    11 | JUSUS   | KAMU     | MALE   | NORTHERN | MUSANZE    | MUHOZA    | KANGONDO | BUSASA   | 0785554422 | JUSUS@GMAIL.COM   |
+|    12 | LUISE   | MUHOZA   | FEMALE | WESTERN  | RISIZI     | RUTONGO   | KARAMA   | RWENE    | 0789974455 | LUISE@GMAIL.COM   |
+|    13 | KEVIN   | MUGISHA  | MALE   | KIGALI   | KICUKIRO   | KANOMBE   | BUSANZA  | ANTENE   | 0786554673 | KEVIN@GMAIL.COM   |
+|    13 | RUGEGE  | KARANGWA | MALE   | KIGALI   | KICUKIRO   | NYANDUNGU | NONKO    | GASARABA | 0786554353 | RUGEGE@GMAIL.COM  |
+|    14 | RUGAJU  | KGANGOA  | MALE   | KIGALI   | GASABO     | GATSATA   | IDIGIRI  | IBERESHI | 0786554323 | RUGAJU@GMAIL.COM  |
+|    15 | BONGISA | GATAWUTI | MALE   | KIGALI   | GASABO     | KIMIRONKO | KAVUZA   | KORODORO | 0743453452 | BONGISA@GMAIL.COM |
+|    16 | MERSA   | MUSA     | FEMALE | EASTE    | BUGESERA   | NYAMATA   | MURAMBI  | JABANA   | 0743444444 | MERSAA@GMAIL.COM  |
+|    17 | MERY    | MUSABWA  | FEMALE | EASTE    | RWAMAGANA  | MUSHUBI   | GATATE   | RUGUNGA  | BWERAMAN   | MERY@GMAIL.COM    |
+|    18 | MARTE   | MUHOZA   | MALE   | SOURTH   | NYANZA     | MUKURA    | GASESA   | MUGINA   | KAEMBURE   | MARTE@GMAIL.COM   |
+|    19 | LUCK    | GANZA    | MALE   | KIGALI   | NYARUGENGE | MUHIMA    | KINAMBA  | MERU     | MBURE      | LUCKE@GMAIL.COM   |
++-------+---------+----------+--------+----------+------------+-----------+----------+----------+------------+-------------------+
+10 rows in set (0.00 sec)
+
+mysql> UPDATE NGOMA SET ID_NO=20 WHERE FNAME='RUGEGE';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT *FROM NGOMA;
++-------+---------+----------+--------+----------+------------+-----------+----------+----------+------------+-------------------+
+| ID_NO | FNAME   | SNAMES   | GENDER | PROVINCE | DISTRICT   | SECTOR    | SELL     | VILLAGE  | TELEPHONE  | EMAIL             |
++-------+---------+----------+--------+----------+------------+-----------+----------+----------+------------+-------------------+
+|    11 | JUSUS   | KAMU     | MALE   | NORTHERN | MUSANZE    | MUHOZA    | KANGONDO | BUSASA   | 0785554422 | JUSUS@GMAIL.COM   |
+|    12 | LUISE   | MUHOZA   | FEMALE | WESTERN  | RISIZI     | RUTONGO   | KARAMA   | RWENE    | 0789974455 | LUISE@GMAIL.COM   |
+|    13 | KEVIN   | MUGISHA  | MALE   | KIGALI   | KICUKIRO   | KANOMBE   | BUSANZA  | ANTENE   | 0786554673 | KEVIN@GMAIL.COM   |
+|    20 | RUGEGE  | KARANGWA | MALE   | KIGALI   | KICUKIRO   | NYANDUNGU | NONKO    | GASARABA | 0786554353 | RUGEGE@GMAIL.COM  |
+|    14 | RUGAJU  | KGANGOA  | MALE   | KIGALI   | GASABO     | GATSATA   | IDIGIRI  | IBERESHI | 0786554323 | RUGAJU@GMAIL.COM  |
+|    15 | BONGISA | GATAWUTI | MALE   | KIGALI   | GASABO     | KIMIRONKO | KAVUZA   | KORODORO | 0743453452 | BONGISA@GMAIL.COM |
+|    16 | MERSA   | MUSA     | FEMALE | EASTE    | BUGESERA   | NYAMATA   | MURAMBI  | JABANA   | 0743444444 | MERSAA@GMAIL.COM  |
+|    17 | MERY    | MUSABWA  | FEMALE | EASTE    | RWAMAGANA  | MUSHUBI   | GATATE   | RUGUNGA  | BWERAMAN   | MERY@GMAIL.COM    |
+|    18 | MARTE   | MUHOZA   | MALE   | SOURTH   | NYANZA     | MUKURA    | GASESA   | MUGINA   | KAEMBURE   | MARTE@GMAIL.COM   |
+|    19 | LUCK    | GANZA    | MALE   | KIGALI   | NYARUGENGE | MUHIMA    | KINAMBA  | MERU     | MBURE      | LUCKE@GMAIL.COM   |
++-------+---------+----------+--------+----------+------------+-----------+----------+----------+------------+-------------------+
+10 rows in set (0.00 sec)
+
+mysql> ALTER TABLE NGOMA  ADD ATTENDANCE CHAR(15);
+Query OK, 10 rows affected (0.05 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> SELECT *FROM NGOMA;
++-------+---------+----------+--------+----------+------------+-----------+----------+----------+------------+-------------------+------------+
+| ID_NO | FNAME   | SNAMES   | GENDER | PROVINCE | DISTRICT   | SECTOR    | SELL     | VILLAGE  | TELEPHONE  | EMAIL             | ATTENDANCE |
++-------+---------+----------+--------+----------+------------+-----------+----------+----------+------------+-------------------+------------+
+|    11 | JUSUS   | KAMU     | MALE   | NORTHERN | MUSANZE    | MUHOZA    | KANGONDO | BUSASA   | 0785554422 | JUSUS@GMAIL.COM   | NULL       |
+|    12 | LUISE   | MUHOZA   | FEMALE | WESTERN  | RISIZI     | RUTONGO   | KARAMA   | RWENE    | 0789974455 | LUISE@GMAIL.COM   | NULL       |
+|    13 | KEVIN   | MUGISHA  | MALE   | KIGALI   | KICUKIRO   | KANOMBE   | BUSANZA  | ANTENE   | 0786554673 | KEVIN@GMAIL.COM   | NULL       |
+|    20 | RUGEGE  | KARANGWA | MALE   | KIGALI   | KICUKIRO   | NYANDUNGU | NONKO    | GASARABA | 0786554353 | RUGEGE@GMAIL.COM  | NULL       |
+|    14 | RUGAJU  | KGANGOA  | MALE   | KIGALI   | GASABO     | GATSATA   | IDIGIRI  | IBERESHI | 0786554323 | RUGAJU@GMAIL.COM  | NULL       |
+|    15 | BONGISA | GATAWUTI | MALE   | KIGALI   | GASABO     | KIMIRONKO | KAVUZA   | KORODORO | 0743453452 | BONGISA@GMAIL.COM | NULL       |
+|    16 | MERSA   | MUSA     | FEMALE | EASTE    | BUGESERA   | NYAMATA   | MURAMBI  | JABANA   | 0743444444 | MERSAA@GMAIL.COM  | NULL       |
+|    17 | MERY    | MUSABWA  | FEMALE | EASTE    | RWAMAGANA  | MUSHUBI   | GATATE   | RUGUNGA  | BWERAMAN   | MERY@GMAIL.COM    | NULL       |
+|    18 | MARTE   | MUHOZA   | MALE   | SOURTH   | NYANZA     | MUKURA    | GASESA   | MUGINA   | KAEMBURE   | MARTE@GMAIL.COM   | NULL       |
+|    19 | LUCK    | GANZA    | MALE   | KIGALI   | NYARUGENGE | MUHIMA    | KINAMBA  | MERU     | MBURE      | LUCKE@GMAIL.COM   | NULL       |
++-------+---------+----------+--------+----------+------------+-----------+----------+----------+------------+-------------------+------------+
+10 rows in set (0.00 sec)
+
+mysql>  ALTER TABLE NGOMA DROP ATTENDENCE;
+ERROR 1091 (42000): Can't DROP 'ATTENDENCE'; check that column/key exists
+mysql> ALTER TABLE NGOMA ATTENDANCE;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ATTENDANCE' at line 1
+mysql> ALTER TABLE NGOMA ATTENDANCE;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ATTENDANCE' at line 1
+mysql> ALTER TABLE NGOMA DROP ATTENDANCE;
+Query OK, 10 rows affected (0.06 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> SELECT *FROM NGOMA;
++-------+---------+----------+--------+----------+------------+-----------+----------+----------+------------+-------------------+
+| ID_NO | FNAME   | SNAMES   | GENDER | PROVINCE | DISTRICT   | SECTOR    | SELL     | VILLAGE  | TELEPHONE  | EMAIL             |
++-------+---------+----------+--------+----------+------------+-----------+----------+----------+------------+-------------------+
+|    11 | JUSUS   | KAMU     | MALE   | NORTHERN | MUSANZE    | MUHOZA    | KANGONDO | BUSASA   | 0785554422 | JUSUS@GMAIL.COM   |
+|    12 | LUISE   | MUHOZA   | FEMALE | WESTERN  | RISIZI     | RUTONGO   | KARAMA   | RWENE    | 0789974455 | LUISE@GMAIL.COM   |
+|    13 | KEVIN   | MUGISHA  | MALE   | KIGALI   | KICUKIRO   | KANOMBE   | BUSANZA  | ANTENE   | 0786554673 | KEVIN@GMAIL.COM   |
+|    20 | RUGEGE  | KARANGWA | MALE   | KIGALI   | KICUKIRO   | NYANDUNGU | NONKO    | GASARABA | 0786554353 | RUGEGE@GMAIL.COM  |
+|    14 | RUGAJU  | KGANGOA  | MALE   | KIGALI   | GASABO     | GATSATA   | IDIGIRI  | IBERESHI | 0786554323 | RUGAJU@GMAIL.COM  |
+|    15 | BONGISA | GATAWUTI | MALE   | KIGALI   | GASABO     | KIMIRONKO | KAVUZA   | KORODORO | 0743453452 | BONGISA@GMAIL.COM |
+|    16 | MERSA   | MUSA     | FEMALE | EASTE    | BUGESERA   | NYAMATA   | MURAMBI  | JABANA   | 0743444444 | MERSAA@GMAIL.COM  |
+|    17 | MERY    | MUSABWA  | FEMALE | EASTE    | RWAMAGANA  | MUSHUBI   | GATATE   | RUGUNGA  | BWERAMAN   | MERY@GMAIL.COM    |
+|    18 | MARTE   | MUHOZA   | MALE   | SOURTH   | NYANZA     | MUKURA    | GASESA   | MUGINA   | KAEMBURE   | MARTE@GMAIL.COM   |
+|    19 | LUCK    | GANZA    | MALE   | KIGALI   | NYARUGENGE | MUHIMA    | KINAMBA  | MERU     | MBURE      | LUCKE@GMAIL.COM   |
++-------+---------+----------+--------+----------+------------+-----------+----------+----------+------------+-------------------+
+10 rows in set (0.00 sec)
+
+mysql> SELECT *FROM NGOMA;
++-------+---------+----------+--------+----------+------------+-----------+----------+----------+------------+-------------------+
+| ID_NO | FNAME   | SNAMES   | GENDER | PROVINCE | DISTRICT   | SECTOR    | SELL     | VILLAGE  | TELEPHONE  | EMAIL             |
++-------+---------+----------+--------+----------+------------+-----------+----------+----------+------------+-------------------+
+|    11 | JUSUS   | KAMU     | MALE   | NORTHERN | MUSANZE    | MUHOZA    | KANGONDO | BUSASA   | 0785554422 | JUSUS@GMAIL.COM   |
+|    12 | LUISE   | MUHOZA   | FEMALE | WESTERN  | RISIZI     | RUTONGO   | KARAMA   | RWENE    | 0789974455 | LUISE@GMAIL.COM   |
+|    13 | KEVIN   | MUGISHA  | MALE   | KIGALI   | KICUKIRO   | KANOMBE   | BUSANZA  | ANTENE   | 0786554673 | KEVIN@GMAIL.COM   |
+|    20 | RUGEGE  | KARANGWA | MALE   | KIGALI   | KICUKIRO   | NYANDUNGU | NONKO    | GASARABA | 0786554353 | RUGEGE@GMAIL.COM  |
+|    14 | RUGAJU  | KGANGOA  | MALE   | KIGALI   | GASABO     | GATSATA   | IDIGIRI  | IBERESHI | 0786554323 | RUGAJU@GMAIL.COM  |
+|    15 | BONGISA | GATAWUTI | MALE   | KIGALI   | GASABO     | KIMIRONKO | KAVUZA   | KORODORO | 0743453452 | BONGISA@GMAIL.COM |
+|    16 | MERSA   | MUSA     | FEMALE | EASTE    | BUGESERA   | NYAMATA   | MURAMBI  | JABANA   | 0743444444 | MERSAA@GMAIL.COM  |
+|    17 | MERY    | MUSABWA  | FEMALE | EASTE    | RWAMAGANA  | MUSHUBI   | GATATE   | RUGUNGA  | BWERAMAN   | MERY@GMAIL.COM    |
+|    18 | MARTE   | MUHOZA   | MALE   | SOURTH   | NYANZA     | MUKURA    | GASESA   | MUGINA   | KAEMBURE   | MARTE@GMAIL.COM   |
+|    19 | LUCK    | GANZA    | MALE   | KIGALI   | NYARUGENGE | MUHIMA    | KINAMBA  | MERU     | MBURE      | LUCKE@GMAIL.COM   |
++-------+---------+----------+--------+----------+------------+-----------+----------+----------+------------+-------------------+
+10 rows in set (0.00 sec)
+
+mysql> ALTER TABLE NGOMA ADD ATTENDANCE;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> ALTER TABLE NGOMA  ADD ATTENDANCE;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> ALTER TABLE NGOMA  ADD ATTENDANCE CHAR(15);
+Query OK, 10 rows affected (0.05 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> SELECT *FROM NGOMA;
++-------+---------+----------+--------+----------+------------+-----------+----------+----------+------------+-------------------+------------+
+| ID_NO | FNAME   | SNAMES   | GENDER | PROVINCE | DISTRICT   | SECTOR    | SELL     | VILLAGE  | TELEPHONE  | EMAIL             | ATTENDANCE |
++-------+---------+----------+--------+----------+------------+-----------+----------+----------+------------+-------------------+------------+
+|    11 | JUSUS   | KAMU     | MALE   | NORTHERN | MUSANZE    | MUHOZA    | KANGONDO | BUSASA   | 0785554422 | JUSUS@GMAIL.COM   | NULL       |
+|    12 | LUISE   | MUHOZA   | FEMALE | WESTERN  | RISIZI     | RUTONGO   | KARAMA   | RWENE    | 0789974455 | LUISE@GMAIL.COM   | NULL       |
+|    13 | KEVIN   | MUGISHA  | MALE   | KIGALI   | KICUKIRO   | KANOMBE   | BUSANZA  | ANTENE   | 0786554673 | KEVIN@GMAIL.COM   | NULL       |
+|    20 | RUGEGE  | KARANGWA | MALE   | KIGALI   | KICUKIRO   | NYANDUNGU | NONKO    | GASARABA | 0786554353 | RUGEGE@GMAIL.COM  | NULL       |
+|    14 | RUGAJU  | KGANGOA  | MALE   | KIGALI   | GASABO     | GATSATA   | IDIGIRI  | IBERESHI | 0786554323 | RUGAJU@GMAIL.COM  | NULL       |
+|    15 | BONGISA | GATAWUTI | MALE   | KIGALI   | GASABO     | KIMIRONKO | KAVUZA   | KORODORO | 0743453452 | BONGISA@GMAIL.COM | NULL       |
+|    16 | MERSA   | MUSA     | FEMALE | EASTE    | BUGESERA   | NYAMATA   | MURAMBI  | JABANA   | 0743444444 | MERSAA@GMAIL.COM  | NULL       |
+|    17 | MERY    | MUSABWA  | FEMALE | EASTE    | RWAMAGANA  | MUSHUBI   | GATATE   | RUGUNGA  | BWERAMAN   | MERY@GMAIL.COM    | NULL       |
+|    18 | MARTE   | MUHOZA   | MALE   | SOURTH   | NYANZA     | MUKURA    | GASESA   | MUGINA   | KAEMBURE   | MARTE@GMAIL.COM   | NULL       |
+|    19 | LUCK    | GANZA    | MALE   | KIGALI   | NYARUGENGE | MUHIMA    | KINAMBA  | MERU     | MBURE      | LUCKE@GMAIL.COM   | NULL       |
++-------+---------+----------+--------+----------+------------+-----------+----------+----------+------------+-------------------+------------+
+10 rows in set (0.00 sec)
+
+mysql> UPDATE NGOMA SET ATTENDANCE='SINGNED' WHERE ID ='11';
+ERROR 1054 (42S22): Unknown column 'ID' in 'where clause'
+mysql> UPDATE NGOMA SET ATTENDENCE='SIGN' WHERE ID='11';
+ERROR 1054 (42S22): Unknown column 'ID' in 'where clause'
+mysql> UPDATE NGOMA SET ATTENDENCE='SIGN' WHERE ID_NO='11';
+ERROR 1054 (42S22): Unknown column 'ATTENDENCE' in 'field list'
+mysql> SELECT *FROM NGOMA WHERE GENDER='MALE' AND SECTOR='MUHOZA';
++-------+-------+--------+--------+----------+----------+--------+----------+---------+------------+-----------------+------------+
+| ID_NO | FNAME | SNAMES | GENDER | PROVINCE | DISTRICT | SECTOR | SELL     | VILLAGE | TELEPHONE  | EMAIL           | ATTENDANCE |
++-------+-------+--------+--------+----------+----------+--------+----------+---------+------------+-----------------+------------+
+|    11 | JUSUS | KAMU   | MALE   | NORTHERN | MUSANZE  | MUHOZA | KANGONDO | BUSASA  | 0785554422 | JUSUS@GMAIL.COM | NULL       |
++-------+-------+--------+--------+----------+----------+--------+----------+---------+------------+-----------------+------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT *FROM NGOMA WHERE GENDER='FAMALE' WHERE PROVINCE='KIGALI';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE PROVINCE='KIGALI'' at line 1
+mysql> SELECT *FROM NGOMA WHERE GENDER='FAMALE' WHERE PROVINCE='KIGALI';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE PROVINCE='KIGALI'' at line 1
+mysql> SELECT *FROM NGOMA WHERE GENDER='FAMALE' OR PROVINCE='KIGALI';
++-------+---------+----------+--------+----------+------------+-----------+---------+----------+------------+-------------------+------------+
+| ID_NO | FNAME   | SNAMES   | GENDER | PROVINCE | DISTRICT   | SECTOR    | SELL    | VILLAGE  | TELEPHONE  | EMAIL             | ATTENDANCE |
++-------+---------+----------+--------+----------+------------+-----------+---------+----------+------------+-------------------+------------+
+|    13 | KEVIN   | MUGISHA  | MALE   | KIGALI   | KICUKIRO   | KANOMBE   | BUSANZA | ANTENE   | 0786554673 | KEVIN@GMAIL.COM   | NULL       |
+|    20 | RUGEGE  | KARANGWA | MALE   | KIGALI   | KICUKIRO   | NYANDUNGU | NONKO   | GASARABA | 0786554353 | RUGEGE@GMAIL.COM  | NULL       |
+|    14 | RUGAJU  | KGANGOA  | MALE   | KIGALI   | GASABO     | GATSATA   | IDIGIRI | IBERESHI | 0786554323 | RUGAJU@GMAIL.COM  | NULL       |
+|    15 | BONGISA | GATAWUTI | MALE   | KIGALI   | GASABO     | KIMIRONKO | KAVUZA  | KORODORO | 0743453452 | BONGISA@GMAIL.COM | NULL       |
+|    19 | LUCK    | GANZA    | MALE   | KIGALI   | NYARUGENGE | MUHIMA    | KINAMBA | MERU     | MBURE      | LUCKE@GMAIL.COM   | NULL       |
++-------+---------+----------+--------+----------+------------+-----------+---------+----------+------------+-------------------+------------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT *FROM NGOMA;
++-------+---------+----------+--------+----------+------------+-----------+----------+----------+------------+-------------------+------------+
+| ID_NO | FNAME   | SNAMES   | GENDER | PROVINCE | DISTRICT   | SECTOR    | SELL     | VILLAGE  | TELEPHONE  | EMAIL             | ATTENDANCE |
++-------+---------+----------+--------+----------+------------+-----------+----------+----------+------------+-------------------+------------+
+|    11 | JUSUS   | KAMU     | MALE   | NORTHERN | MUSANZE    | MUHOZA    | KANGONDO | BUSASA   | 0785554422 | JUSUS@GMAIL.COM   | NULL       |
+|    12 | LUISE   | MUHOZA   | FEMALE | WESTERN  | RISIZI     | RUTONGO   | KARAMA   | RWENE    | 0789974455 | LUISE@GMAIL.COM   | NULL       |
+|    13 | KEVIN   | MUGISHA  | MALE   | KIGALI   | KICUKIRO   | KANOMBE   | BUSANZA  | ANTENE   | 0786554673 | KEVIN@GMAIL.COM   | NULL       |
+|    20 | RUGEGE  | KARANGWA | MALE   | KIGALI   | KICUKIRO   | NYANDUNGU | NONKO    | GASARABA | 0786554353 | RUGEGE@GMAIL.COM  | NULL       |
+|    14 | RUGAJU  | KGANGOA  | MALE   | KIGALI   | GASABO     | GATSATA   | IDIGIRI  | IBERESHI | 0786554323 | RUGAJU@GMAIL.COM  | NULL       |
+|    15 | BONGISA | GATAWUTI | MALE   | KIGALI   | GASABO     | KIMIRONKO | KAVUZA   | KORODORO | 0743453452 | BONGISA@GMAIL.COM | NULL       |
+|    16 | MERSA   | MUSA     | FEMALE | EASTE    | BUGESERA   | NYAMATA   | MURAMBI  | JABANA   | 0743444444 | MERSAA@GMAIL.COM  | NULL       |
+|    17 | MERY    | MUSABWA  | FEMALE | EASTE    | RWAMAGANA  | MUSHUBI   | GATATE   | RUGUNGA  | BWERAMAN   | MERY@GMAIL.COM    | NULL       |
+|    18 | MARTE   | MUHOZA   | MALE   | SOURTH   | NYANZA     | MUKURA    | GASESA   | MUGINA   | KAEMBURE   | MARTE@GMAIL.COM   | NULL       |
+|    19 | LUCK    | GANZA    | MALE   | KIGALI   | NYARUGENGE | MUHIMA    | KINAMBA  | MERU     | MBURE      | LUCKE@GMAIL.COM   | NULL       |
++-------+---------+----------+--------+----------+------------+-----------+----------+----------+------------+-------------------+------------+
+10 rows in set (0.00 sec)
+
+mysql>
